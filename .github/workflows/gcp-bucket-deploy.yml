@@ -21,9 +21,9 @@ jobs:
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
         with:
-          project_id: YOUR_PROJECT_ID
+          project_id: turnkey-energy-457517-u4
 
       # ✅ Step 3: Create GCS bucket
       - name: Create Bucket 1
         run: |
-          gsutil mb -p YOUR_PROJECT_ID -l EU gs://kovas6-bucket-1/
+          gsutil mb -p turnkey-energy-457517-u4 -l EU gs://kovas6-bucket-1/
