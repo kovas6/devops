@@ -26,4 +26,5 @@ jobs:
       # ✅ Step 3: Create GCS bucket
       - name: Create Bucket 1
         run: |
-          gsutil mb -p turnkey-energy-457517-u4 -l EU gs://kovas6-bucket-1/
+          gcloud auth list
+          #gsutil mb -p turnkey-energy-457517-u4 -l EU gs://kovas6-bucket-1/
