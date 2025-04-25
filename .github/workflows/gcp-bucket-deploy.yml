@@ -11,13 +11,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # ✅ Step 1: Authenticate to Google Cloud
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS_JSON }}'
+
+      # ✅ Step 2: Set up gcloud SDK (now already authenticated)
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
         with:
-          project_id: turnkey-energy-457517-u4
-          service_account_key: ${{ secrets.GCP_CREDENTIALS_JSON }}
-          export_default_credentials: true
+          project_id: YOUR_PROJECT_ID
 
+      # ✅ Step 3: Create GCS bucket
       - name: Create Bucket 1
         run: |
-          gsutil mb -p turnkey-energy-457517-u4 -l EU gs://kovas6-bucket-1/
+          gsutil mb -p YOUR_PROJECT_ID -l EU gs://kovas6-bucket-1/
