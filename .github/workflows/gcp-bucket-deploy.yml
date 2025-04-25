@@ -1,10 +1,10 @@
-name: Deploy GCS Buckets
+name: Deploy GCP Buckets
 
 on:
   workflow_dispatch:
 
 jobs:
-  deploy-buckets:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,17 +14,14 @@ jobs:
     - name: Set up Google Cloud SDK
       uses: google-github-actions/setup-gcloud@v2
       with:
-        version: 'latest'
+        project_id: turnkey-energy-457517-u4
         service_account_key: ${{ secrets.GCP_CREDENTIALS_JSON }}
         export_default_credentials: true
-        project_id: turnkey-energy-457517-u4  # 👈 Your project ID here
 
     - name: Create Bucket 1
       run: |
-        BUCKET_NAME_1="kovas6-bucket-1"
-        gsutil mb -p turnkey-energy-457517-u4 -l europe-west1 gs://$BUCKET_NAME_1/
+        gsutil mb -p turnkey-energy-457517-u4 -l EU gs://kovas6-bucket-1/
 
     - name: Create Bucket 2
       run: |
-        BUCKET_NAME_2="kovas6-bucket-2"
-        gsutil mb -p turnkey-energy-457517-u4 -l europe-west1 gs://$BUCKET_NAME_2/
+        gsutil mb -p turnkey-energy-457517-u4 -l EU gs://kovas6-bucket-2/
