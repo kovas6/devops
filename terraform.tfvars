@@ -18,5 +18,7 @@ vms = {
     image         = "ubuntu-2004-focal-v20210927"
     image_project = "ubuntu-os-cloud"
     network       = "default"
+    disk_image    = "ubuntu-2004-focal-v20210927" # same as image
+    disk_size     = 10                            # in GB, minimal disk size
   }
 }
