@@ -37,11 +37,11 @@ jobs:
         run: terraform init
 
       # Step 5: Import Existing Buckets Dynamically
-      - name: Terraform Import Existing Buckets
-        run: |
-          for bucket in $(terraform output -json bucket_names | jq -r '.[]'); do
-            terraform import google_storage_bucket.buckets["$bucket"] "$bucket"
-          done
+      #- name: Terraform Import Existing Buckets
+      #  run: |
+      #    for bucket in $(terraform output -json bucket_names | jq -r '.[]'); do
+      #     terraform import google_storage_bucket.buckets["$bucket"] "$bucket"
+      #   done
 
       # Step 6: Terraform Plan
       - name: Terraform Plan
