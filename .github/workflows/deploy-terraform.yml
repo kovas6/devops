@@ -32,7 +32,7 @@ jobs:
         with:
           terraform_version: 1.5.0
 
-      # Step 4: Initialize Terraform
+      # Step 4: Initialize Terraform (with backend)
       - name: Terraform Init
         run: terraform init
 
