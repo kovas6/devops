@@ -14,3 +14,8 @@ module "gcp_buckets" {
   source  = "./modules/gcp-buckets"
   buckets = var.buckets
 }
+
+module "gcp_vms" {
+  source = "./modules/gcp-vms"
+  vms    = var.vms
+}
