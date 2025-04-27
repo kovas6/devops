@@ -12,7 +12,7 @@ buckets = {
 }
 
 vms = {
-  "testVM" = {
+  "testvm1" = {
     machine_type  = "e2-micro"
     zone          = "us-central1-a"
     image         = "ubuntu-2004-focal-v20210927"
