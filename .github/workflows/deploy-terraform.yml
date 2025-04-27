@@ -34,7 +34,7 @@ jobs:
 
       # Step 4: Initialize Terraform (with backend)
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -reconfigure
 
       # Step 5: Import Existing Buckets Dynamically
       #- name: Terraform Import Existing Buckets
@@ -44,9 +44,9 @@ jobs:
       #   done
 
       # Step 6: Terraform Plan
-      #- name: Terraform Plan
-      #  run: terraform plan
+      - name: Terraform Plan
+        run: terraform plan
 
       # Step 7: Terraform Apply
-      #- name: Terraform Apply
-      #  run: terraform apply -auto-approve
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
