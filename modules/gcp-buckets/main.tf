@@ -2,6 +2,7 @@ terraform {
   backend "gcs" {
     bucket = "kovas6-bucket-1"
     prefix = "terraform/state"
+    project = "turnkey-energy-457517-u4"  # Specify your project ID
   }
 }
 
