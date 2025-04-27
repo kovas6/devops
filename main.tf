@@ -10,7 +10,7 @@ provider "google" {
   region  = "us-central1"
 }
 
-module "buckets" {
-  source = "./modules/buckets"  # Adjust path if necessary
+module "gcp_buckets" {
+  source  = "./modules/gcp-buckets"
   buckets = var.buckets
 }
