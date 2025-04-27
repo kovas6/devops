@@ -16,6 +16,6 @@ module "gcp_buckets" {
 }
 
 module "gcp_vms" {
-  source = "./modules/gcp-vms"
-  vms    = var.vms
+  source  = "./modules/gcp-vms"
+  vms     = var.vms
 }
