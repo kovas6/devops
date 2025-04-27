@@ -1,4 +1,10 @@
 variable "bucket_names" {
-  description = "List of GCS bucket names to create"
-  type        = list(string)
+  type = list(string)
+  description = "List of GCP bucket names to create."
+}
+
+variable "bucket_location" {
+  type        = string
+  description = "The location where the buckets will be created."
+  default     = "US"
 }

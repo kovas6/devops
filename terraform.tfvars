@@ -1,4 +1,10 @@
-bucket_names = [
-    #"my-logs-bucke-195989116512", 
-    #"my-static-bucket-161616169"
-    ]
+buckets = {
+  "lv-bucket-1" = {
+    name     = "lv-bucket-1"
+    location = "us"
+  },
+  "lv-bucket-2" = {
+    name     = "lv-bucket-2"
+    location = "eu"
+  }
+}
