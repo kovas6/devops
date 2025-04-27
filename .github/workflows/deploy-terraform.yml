@@ -44,9 +44,9 @@ jobs:
       #   done
 
       # Step 6: Terraform Plan
-      - name: Terraform Plan
-        run: terraform plan
+      #- name: Terraform Plan
+      #  run: terraform plan
 
       # Step 7: Terraform Apply
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
+      #- name: Terraform Apply
+      #  run: terraform apply -auto-approve
