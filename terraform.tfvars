@@ -4,5 +4,8 @@ buckets = {
   },
   "lv-bucket-2-498494949616153113" = {
     location = "eu"
+    labels = {
+      env = "prod"
+    }
   }
 }
